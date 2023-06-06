@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "designxcel",
     "public": "dist",
     "ignore": [
       "firebase.json",
