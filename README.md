@@ -1,29 +1,63 @@
-# b712-summer-camp-client-side-syedmirhabib
+# DesignXcel
 
+Live Demo: [DesignXcel Live Demo](https://designxcel.com)
 
-## My Website
-
-This repository contains the source code and files for my personal website. The website is built using HTML, CSS, and JavaScript, and it serves as a portfolio to showcase my projects, skills, and experiences.
-
-## Table of Contents
-
-- [b712-summer-camp-client-side-syedmirhabib](#b712-summer-camp-client-side-syedmirhabib)
-  - [My Website](#my-website)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
+DesignXcel is a website for a summer camp learning school that specializes in various artistic disciplines. The website provides a platform for students to enroll and learn different creative activities. Whether it's music, dance, art & craft, foreign languages, or any other artistic pursuit, DesignXcel offers a wide range of classes taught by experienced instructors.
 
 ## Features
 
-- Responsive design that adapts to different screen sizes, ensuring a seamless user experience across devices.
-- Home page: Provides an overview of who I am, my background, and highlights of my work.
-- Projects page: Displays a collection of my projects, including descriptions, screenshots, and links to live demos or repositories.
-- Skills page: Highlights my technical skills, including programming languages, frameworks, and tools.
-- Experience page: Presents my professional experience, including details about past positions, responsibilities, and achievements.
-- Contact page: Allows visitors to get in touch with me via a contact form.
+- User Registration and Login: Students can create an account and log in to access their dashboard and enroll in classes.
+- User Profiles: Each user has a profile page where they can update their personal information and view their enrolled classes.
+- Instructor Profiles: Instructors have their own profiles displaying their details, including the classes they teach.
+- Classes Page: Students can browse through the available classes, view class details, and enroll in their desired courses.
+- Dashboard: Students have a dedicated dashboard where they can view their selected and enrolled classes, make payments, and manage their bookings.
+- Instructor Dashboard: Instructors can add new classes, manage their existing classes, and view the number of enrolled students.
+- Admin Dashboard: Administrators have access to a dashboard to manage classes, users, and approve or deny class submissions from instructors.
+- Payment Integration: Students can make payments for their selected classes securely through the website.
+- Responsive Design: The website is designed to be responsive, ensuring a seamless experience across different devices.
+
+## Technologies Used
+
+- Front-end: React.js, HTML, CSS, JavaScript
+- Back-end: Node.js, Express.js
+- Database: MongoDB
+- Authentication: JWT (JSON Web Tokens)
+- Payment Integration: [Payment Gateway API]
+
+## Getting Started
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone [repository-url]
+
+2. Install the dependencies:
+    cd client
+    npm install
+    cd ../server
+    npm install
+
+3. Set up the environment variables:
+
+- Create a .env file in the server directory.
+- Add the necessary environment variables, such as database connection string, JWT secret, and payment gateway API keys.
+
+4. Start the development server:
+    cd client
+    npm start
+    cd ../server
+    npm start
+
+5. Open your browser and navigate to http://localhost:3000 to access the website.
+
+
+## Live Demo
+
+Check out the live demo of DesignXcel here.
+
+Please note that some features might be disabled or limited in the demo version.
 
 ## Installation
 
@@ -39,6 +73,8 @@ Once the website is running, you can explore the different pages by clicking on 
 
 ## Contributing
 
+Contributions to DesignXcel are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+
 Thank you for your interest in contributing to this project. If you would like to make any improvements or fix any issues, please follow these steps:
 
 1. Fork the repository.
@@ -51,3 +87,5 @@ Thank you for your interest in contributing to this project. If you would like t
 ## License
 
 The content of this repository is licensed under the [MIT License](LICENSE).
+
+Copy the code above and paste it into your `README.md` file. Make sure to replace `[repository-url]` in step 1 of the "Getting Started" section with the actual URL of your repository.
