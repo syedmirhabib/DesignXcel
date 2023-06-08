@@ -41,8 +41,8 @@ To run the project locally, follow these steps:
 
 3. Set up the environment variables:
 
-- Create a .env file in the server directory.
-- Add the necessary environment variables, such as database connection string, JWT secret, and payment gateway API keys.
+   - Create a .env file in the server directory.
+   - Add the necessary environment variables, such as the database connection string, JWT secret, and payment gateway API keys.
 
 4. Start the development server:
     cd client
@@ -50,8 +50,7 @@ To run the project locally, follow these steps:
     cd ../server
     npm start
 
-5. Open your browser and navigate to http://localhost:3000 to access the website.
-
+5. Open your browser and navigate to <http://localhost:5000> to access the website.
 
 ## Live Demo
 
