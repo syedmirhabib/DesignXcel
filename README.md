@@ -50,7 +50,7 @@ To run the project locally, follow these steps:
     cd ../server
     npm start
 
-5. Open your browser and navigate to <http://localhost:5000> to access the website.
+5. Open your browser and navigate to <http://localhost:5173> to access the website.
 
 ## Live Demo
 
@@ -62,7 +62,7 @@ Please note that some features might be disabled or limited in the demo version.
 
 To run this website locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
+1. Clone the repository: `git clone https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-syedmirhabib.git`
 2. Navigate to the project directory: `cd your-repo`
 3. Open the `index.html` file in your preferred web browser.
 
