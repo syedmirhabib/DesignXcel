@@ -38,6 +38,7 @@
     "react-modern-drawer": "^1.2.0",
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.11.2",
+    "react-countup": "^6.4.2",
     "react-simple-captcha": "^9.0.2",
     "react-slick": "^0.29.0",
     "react-spinners": "^0.13.8",
