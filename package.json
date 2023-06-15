@@ -33,6 +33,7 @@
     "react-hook-form": "^7.44.3",
     "react-icons": "^4.9.0",
     "react-loader-spinner": "^5.3.4",
+    "react-responsive-carousel": "^3.2.23",
     "react-loaders": "^3.0.1",
     "react-modern-drawer": "^1.2.0",
     "react-parallax": "^3.5.1",
