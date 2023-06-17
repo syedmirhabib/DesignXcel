@@ -12,7 +12,7 @@ const PopularClass = () => {
     const fetchClasses = async () => {
       try {
         const response = await axios.get(
-          "https:/design-xcel-server.vercel.app/all-class"
+          "https://design-xcel-server.vercel.app/all-class"
         );
         setClasses(response.data);
       } catch (error) {
@@ -32,7 +32,7 @@ const PopularClass = () => {
         <h2 className="text-4xl font-bold pt-3 pb-3 uppercase text-gray-800">
           <Fade cascade damping={0.15} direction="down" duration={800}>
             Unleash Your{" "}
-            <span className="text-blue-900">Unleash Your Creative Power</span>
+            <span className="text-blue-900">Unleash YourCreative Power</span>
           </Fade>
         </h2>
       </div>

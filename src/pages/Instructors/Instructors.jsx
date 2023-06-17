@@ -9,7 +9,7 @@ const Instructors = () => {
   const [instructors, setInstructors] = useState([]);
 
   useEffect(() => {
-    const url = "https:/design-xcel-server.vercel.app/all-instructor";
+    const url = "https://design-xcel-server.vercel.app/all-instructor";
     setLoading(true);
     axios
       .get(url)

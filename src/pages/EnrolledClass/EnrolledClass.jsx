@@ -9,9 +9,7 @@ const EnrolledClass = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(
-      `https:/design-xcel-server.vercel.app/payments?email=${user?.email}`
-    )
+    fetch(`https://design-xcel-server.vercel.app/payments?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);

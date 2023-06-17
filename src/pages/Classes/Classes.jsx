@@ -14,7 +14,7 @@ const Classes = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const url = "https:/design-xcel-server.vercel.app/all-class";
+    const url = "https://design-xcel-server.vercel.app/all-class";
     setLoading(true);
     axios
       .get(url)
@@ -45,7 +45,7 @@ const Classes = () => {
       };
 
       axios
-        .post("https:/design-xcel-server.vercel.app/carts", orderItem)
+        .post("https://design-xcel-server.vercel.app/carts", orderItem)
         .then((res) => {
           if (res.status === 200) {
             console.log("error handle", res.data);

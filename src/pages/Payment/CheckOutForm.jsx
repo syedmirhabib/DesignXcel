@@ -26,7 +26,7 @@ const CheckoutForm = ({ cart, price }) => {
         localStorage.removeItem("price");
       });
     }
-  }, [price]);
+  }, [axiosSecure, price]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();

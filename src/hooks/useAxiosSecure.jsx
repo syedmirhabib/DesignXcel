@@ -8,7 +8,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate();
 
   const axiosSecure = axios.create({
-    baseURL: "https:/design-xcel-server.vercel.app/",
+    baseURL: "https://design-xcel-server.vercel.app/",
   });
 
   useEffect(() => {

@@ -12,7 +12,7 @@ const AllUsers = () => {
   });
 
   const handleMakeAdmin = (user) => {
-    fetch(`https:/design-xcel-server.vercel.app/users/admin/${user._id}`, {
+    fetch(`https://design-xcel-server.vercel.app/users/admin/${user._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
@@ -33,7 +33,7 @@ const AllUsers = () => {
 
   const handleMakeInstructor = (user) => {
     fetch(
-      `https:/design-xcel-server.vercel.app/users/instructor/${user._id}`,
+      `https://design-xcel-server.vercel.app/users/instructor/${user._id}`,
       {
         method: "PATCH",
       }
