@@ -1,69 +1,99 @@
-import {GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut} from 'firebase/auth'
-import { app } from './../firebase/firebase.config';
+import { createContext, useEffect, useState } from "react";
+import {
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  getAuth,
+  onAuthStateChanged,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  updateProfile,
+} from "firebase/auth";
+import { app } from "../firebase/firebase.config";
+import axios from "axios";
 
-import { createContext, useEffect, useState } from 'react'
+export const AuthContext = createContext(null);
 
-
-
-
-
-const auth = getAuth(app)
+const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
-const githubProvider = new GithubAuthProvider();
 
+const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-export const authContext = createContext(null)
+  const createUser = (email, password) => {
+    setLoading(true);
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
 
-const userRegister = (email,password) =>{
-    return createUserWithEmailAndPassword(auth,email,password);
-}
+  const signIn = (email, password) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, password);
+  };
 
-const userLogin = (email,password) =>{
-    return  signInWithEmailAndPassword(auth,email,password);
-}
+  const signInWithGoogle = () => {
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
+  };
 
-const googleLogin = () =>{
-    return  signInWithPopup(auth,googleProvider);
-}
+  const resetPassword = (email) => {
+    setLoading(true);
+    return sendPasswordResetEmail(auth, email);
+  };
 
-const githubLogin = () =>{
-    return signInWithPopup(auth,githubProvider)
-}
-
-const userLogout = () =>{
+  const logOut = () => {
+    setLoading(true);
     return signOut(auth);
-}
+  };
 
+  const updateUserProfile = (name, photo) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photo,
+    });
+  };
 
-export default function AuthProviders({children}){
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      console.log("current user", currentUser);
 
-    const [ loading,setLoading ] = useState(true);
-    const [ user, setUser ] = useState(null)
+      // get and set token
+      if (currentUser) {
+        axios
+          .post("https://design-xcel-server.vercel.app//jwt", {
+            email: currentUser?.email,
+          })
+          .then((data) => {
+            // console.log(data.data.token)
+            localStorage.setItem("access-token", data.data.token);
+            setLoading(false);
+          });
+      } else {
+        localStorage.removeItem("access-token");
+      }
+    });
+    return () => {
+      return unsubscribe();
+    };
+  }, []);
 
-    const data = {
-        userRegister,
-        userLogin,
-        googleLogin,
-        githubLogin,
-        userLogout,
-        loading,
-        user
-    }
+  const authInfo = {
+    user,
+    loading,
+    setLoading,
+    createUser,
+    signIn,
+    signInWithGoogle,
+    resetPassword,
+    logOut,
+    updateUserProfile,
+  };
 
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth , (user) => {
-            setUser(user)
-            setLoading(false)
-        })
+  return (
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+  );
+};
 
-        return() => {unsubscribe()}
-
-    },[])
-
-
-    return(
-        <authContext.Provider value={data}>
-            {children}
-        </authContext.Provider>
-    )
-}
+export default AuthProvider;

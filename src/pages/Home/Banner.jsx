@@ -1,4 +1,3 @@
-import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Zoom } from "react-awesome-reveal";
@@ -9,7 +8,7 @@ import { default as img4 } from "../../assets/images/banner4.jpg";
 
 const Banner = () => {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="mx-auto">
       <Zoom>
         <Carousel
           showThumbs

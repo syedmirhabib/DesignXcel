@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import logoImg from '../../../public/logo.png';
+import logoImg from './../../../public/logo.png';
 
 const Logo = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -18,10 +18,10 @@ const Logo = () => {
   return (
     <Link to="/" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <img
-        className={`bg-black transition-all duration-300 ${
+        className={`transition-all duration-300 ${
           isHovered ? 'rounded-full' : ''
         }`}
-        src={logoImg}
+        src="https://i.ibb.co/wgPkgFV/logo.png"
         alt="logo"
         width={logoSize}
         height={logoSize}
