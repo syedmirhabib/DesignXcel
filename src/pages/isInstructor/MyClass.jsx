@@ -12,7 +12,7 @@ const MyClass = () => {
 
   useEffect(() => {
     fetch(
-      `https:/design-xcel-server.vercel.app/myclass?email=${user?.email}`
+      `https://design-xcel-server.vercel.app/myclass?email=${user?.email}`
     ).then((res) => res.json().then((data) => setData(data)));
   }, []);
 
