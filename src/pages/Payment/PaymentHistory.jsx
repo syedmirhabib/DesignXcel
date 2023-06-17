@@ -8,9 +8,7 @@ const PaymentHistory = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(
-      `https://assignment-12-server-side-ten.vercel.app/payments?email=${user?.email}`
-    )
+    fetch(`https://design-xcel-server.vercel.app/payments?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) =>
         setData(data.sort((a, b) => new Date(b.date) - new Date(a.date)))
