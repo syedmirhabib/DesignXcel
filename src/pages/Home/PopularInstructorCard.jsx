@@ -4,7 +4,7 @@ const PopularInstructorCard = ({ instructor }) => {
   return (
     <div>
       <div className="bg-white rounded-lg shadow-lg overflow-hidden h-64">
-        <img className="w-full h-32 object-cover object-center" src={instructor.photo} alt={instructor.name} />
+        <img className="w-full h-32 object-cover object-center" src={instructor.image} alt={instructor.name} />
         <div className="p-4">
           <h3 className="text-xl font-bold text-gray-800 mb-2">{instructor.name}</h3>
           <p className="text-gray-600">{instructor.email}</p>

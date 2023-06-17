@@ -7,7 +7,7 @@ const ClassCard = ({ singleClass }) => {
         <figure className="h-3/5">
           <img
             className="h-full w-full object-cover rounded-t-lg"
-            src={singleClass.image}
+            src={singleClass.pictureURL}
             alt="Class"
           />
         </figure>
@@ -22,12 +22,18 @@ const ClassCard = ({ singleClass }) => {
             </span>
           </p>
           <p className="text-center text-gray-600">
-            Current Students:{" "}
+            Seat Left:{" "}
             <span className="text-lg font-semibold text-gray-800">
-              {singleClass.currentStudent}
+              {singleClass.availableQuantity}
             </span>
           </p>
-
+          <p className="text-center text-gray-600">
+            Price:{" "}
+            <span className="text-lg font-semibold text-gray-800">
+              {singleClass.price}
+            </span>
+          </p>
+        
           <Link to="/classes">
             <button className="w-full mt-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg">
               Learn More

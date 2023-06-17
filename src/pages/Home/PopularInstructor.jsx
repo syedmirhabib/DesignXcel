@@ -11,7 +11,7 @@ const Instructors = () => {
     const fetchInstructors = async () => {
       try {
         const response = await axios.get(
-          "https://design-xcel-server.vercel.app//instructor"
+          "https:/design-xcel-server.vercel.app/all-instructor"
         );
         setInstructors(response.data.slice(0, 6)); // Limiting to 6 instructors
       } catch (error) {

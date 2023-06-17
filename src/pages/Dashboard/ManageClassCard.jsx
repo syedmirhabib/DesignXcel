@@ -17,7 +17,7 @@ const ManageClassCard = ({ item }) => {
 
     axios
       .patch(
-        `https://design-xcel-server.vercel.app//instructorClasses/statusApproved/${item._id}`
+        `https:/design-xcel-server.vercel.app/instructorClasses/statusApproved/${item._id}`
       )
       .then((response) => {
         console.log(response.data);
@@ -44,7 +44,7 @@ const ManageClassCard = ({ item }) => {
 
     axios
       .patch(
-        `https://design-xcel-server.vercel.app//instructorClasses/statusRejected/${item._id}`,
+        `https:/design-xcel-server.vercel.app/instructorClasses/statusRejected/${item._id}`,
         { reason: rejectReason }
       )
       .then((response) => {
@@ -83,7 +83,7 @@ const ManageClassCard = ({ item }) => {
     };
     axios
       .patch(
-        `https://design-xcel-server.vercel.app//instructorClasses/${item._id}`,
+        `https:/design-xcel-server.vercel.app/instructorClasses/${item._id}`,
         updatedClass
       )
       .then((response) => {

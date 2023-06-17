@@ -3,11 +3,11 @@ import { FaFacebook } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 const InstructorCard = ({ instructor }) => {
-  const { name, photo, email } = instructor;
+  const { name, image, email } = instructor;
   return (
     <div className="card bg-white rounded-lg w-full max-w-screen-xl shadow-lg p-6">
       <div className="flex items-center justify-center mb-4">
-        <img src={photo} alt="Instructor" className="w-24 h-24 rounded-full" />
+        <img src={image} alt="Instructor" className="w-24 h-24 rounded-full" />
       </div>
       <h2 className="text-2xl font-bold mb-2 text-center">{name}</h2>
       <div className="flex justify-center mb-4">

@@ -62,7 +62,7 @@ const AuthProvider = ({ children }) => {
       // get and set token
       if (currentUser) {
         axios
-          .post("https://design-xcel-server.vercel.app//jwt", {
+          .post("https:/design-xcel-server.vercel.app/jwt", {
             email: currentUser?.email,
           })
           .then((data) => {

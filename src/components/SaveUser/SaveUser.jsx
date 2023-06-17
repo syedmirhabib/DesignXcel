@@ -3,7 +3,7 @@ export const saveUser = (user) => {
     email: user.email,
   };
 
-  fetch(`https://design-xcel-server.vercel.app//users/${user?.email}`, {
+  fetch(`https:/design-xcel-server.vercel.app/users/${user?.email}`, {
     method: "PUT",
     headers: {
       "content-type": "application/json",

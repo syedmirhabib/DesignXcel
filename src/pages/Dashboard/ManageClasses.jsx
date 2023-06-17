@@ -6,7 +6,7 @@ const ManageClasses = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://design-xcel-server.vercel.app//instructorClasses")
+    fetch("https:/design-xcel-server.vercel.app/instructorClasses")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
