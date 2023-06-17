@@ -1,6 +1,6 @@
 # DesignXcel
 
-Live Demo: [DesignXcel Live Demo](https://designxcel.com)
+Live Demo: [DesignXcel Live Demo](https://designxcel.web.app/)
 
 DesignXcel is a website for a summer camp learning school that specializes in various artistic disciplines. The website provides a platform for students to enroll and learn different creative activities. Whether it's music, dance, art & craft, foreign languages, or any other artistic pursuit, DesignXcel offers a wide range of classes taught by experienced instructors.
 
